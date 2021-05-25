@@ -53,7 +53,7 @@ function kata1() {
   let arr = gotCitiesCSV.split(",")
   // Render to the DOM.
  renderArr(1, arr)
-  return []; // Return your result.
+  return arr; // Return your result.
 }
 kata1(); // Remember to execute your function!
 
@@ -62,6 +62,7 @@ function kata2() {
   // Your Code Here
   let arr = bestThing.split(" ")
  renderArr(2, arr)
+ return arr
 } 
 kata2()
 
@@ -71,6 +72,7 @@ function kata3() {
   let arr = gotCitiesCSV.split(",")
   let str = arr.join("; ")
  renderStr(3, str)
+ return str
 }
 kata3()
 
@@ -79,6 +81,7 @@ function kata4() {
   // Your Code Here
   let str = lotrCitiesArray.join(",")
   renderStr(4, str)
+  return str
 }
 kata4()
 
@@ -87,6 +90,7 @@ function kata5() {
   // Your Code Here
   let arr = lotrCitiesArray.slice(0, 5)
   renderArr(5, arr)
+  return arr
 }
 kata5()
 
@@ -95,6 +99,7 @@ function kata6() {
   // Your Code Here
   let arr = lotrCitiesArray.slice(-5)
   renderArr(6, arr)
+  return arr
 }
 kata6()
 
@@ -103,6 +108,7 @@ function kata7() {
   // Your Code Here
   let arr = lotrCitiesArray.slice(2, 5)
   renderArr(7, arr)
+  return arr
 }
 kata7()
 
@@ -113,6 +119,7 @@ function kata8() {
   let arr = lotrCitiesArray
   arr.splice(index, 1)
   renderArr(8, arr)
+  return arr
 }
 kata8()
 
@@ -123,6 +130,7 @@ function kata9() {
   let arr = lotrCitiesArray
   arr.splice(index)
   renderArr(9, arr)
+  return arr
 }
 kata9()
 
@@ -133,6 +141,7 @@ function kata10() {
   let arr = lotrCitiesArray
   arr.splice(index, 0, "Rohan")
   renderArr(10, arr)
+  return arr
 }
 kata10()
 
@@ -143,6 +152,7 @@ function kata11() {
   let arr = lotrCitiesArray
   arr.splice(index, 1, "Deadest Marshes")
   renderArr(11, arr)
+  return arr
 }
 kata11()
 
@@ -151,6 +161,7 @@ function kata12() {
   // Your Code Here
   let str = bestThing.slice(0, 14)
   renderStr(12, str)
+  return str
 }
 kata12()
 
@@ -159,6 +170,7 @@ function kata13() {
   // Your Code Here
   let str = bestThing.slice(-12)
   renderStr(13, str)
+  return str
 }
 kata13()
 
@@ -167,6 +179,7 @@ function kata14() {
   // Your Code Here
   let str = bestThing.slice(23, 38)
   renderStr(14, str)
+  return str
 }
 kata14()
 
@@ -175,6 +188,7 @@ function kata15() {
   // Your Code Here
   let str = bestThing.substring(bestThing.length - 12)
   renderStr(15, str)
+  return str
 }
 kata15()
 
@@ -183,6 +197,7 @@ function kata16() {
   // Your Code Here
   let str = bestThing.substring(23, 38)
   renderStr(16, str)
+  return str
 }
 kata16()
 
@@ -193,6 +208,7 @@ function kata17() {
   removed = lotrCitiesArray.pop()
   let arr = lotrCitiesArray
   renderArr(17, arr)
+  return arr
 }
 kata17()
 
@@ -202,6 +218,7 @@ function kata18() {
   lotrCitiesArray.push(removed)
   let arr = lotrCitiesArray
   renderArr(18, arr)
+  return arr
 }
 kata18()
 
@@ -211,6 +228,7 @@ function kata19() {
   removed = lotrCitiesArray.shift()
   let arr = lotrCitiesArray
   renderArr(19, arr)
+  return arr
 }
 kata19()
 
@@ -220,6 +238,7 @@ function kata20() {
   lotrCitiesArray.unshift(removed)
   let arr = lotrCitiesArray
   renderArr(20, arr)
+  return arr
 }
 kata20()
 
@@ -235,6 +254,7 @@ function kata21() {
   let index = bestThing.split(" ").indexOf("only")
   let str = `The index of "only" in "bestThing is ${index}.`
   renderStr(21, str)
+  return str
 }
 kata21()
 
@@ -244,6 +264,7 @@ function kata22() {
   let index = bestThing.split(" ").length -1
   let str = `The index of the last word in "bestThing" is ${index}`
   renderStr(22, str)
+  return str
 }
 kata22()
 
@@ -259,6 +280,7 @@ function kata23() {
     }
   }
   renderArr(23, arr)
+  return arr
 }
 kata23()
 
@@ -273,6 +295,7 @@ function kata24() {
     }
   }
   renderArr(24, arr)
+  return arr
 }
 kata24()
 
@@ -288,6 +311,7 @@ function kata25() {
     }
   }
   renderArr(25, arr)  
+  return arr
 }
 kata25()
 
@@ -298,11 +322,12 @@ function kata26() {
     if (lotrCitiesArray[i].includes("Mirkwood")){
       let str = "Yes"
       renderStr(26, str)
-      return
+      return "Yes"
     }
   }
   let str = "No"
   renderStr(26, str)
+  return "No"
 }
 kata26()
 
@@ -313,11 +338,12 @@ function kata27() {
     if (lotrCitiesArray[i].includes("Hollywood")){
       let str = "Yes"
       renderStr(27, str)
-      return
+      return "Yes"
     }
   }
   let str = "No"
   renderStr(27, str)
+  return "No"
 }
 kata27()
 
@@ -327,6 +353,7 @@ function kata28() {
   let index = lotrCitiesArray.indexOf("Mirkwood")
   let str = `The index of "Mirkwood" in "lotrCitiesArray" is ${index}.`
   renderStr(28, str)
+  return str
 }
 kata28()
 
@@ -341,6 +368,7 @@ function kata29() {
     }
   }
   renderStr(29, str)
+  return str
 }
 kata29()
 
@@ -349,6 +377,7 @@ function kata30() {
   // Your Code Here
   let arr = lotrCitiesArray.reverse()
   renderArr(30, arr)
+  return arr
 }
 kata30()
 
@@ -357,6 +386,7 @@ function kata31() {
   // Your Code Here
   let arr = lotrCitiesArray.sort()
   renderArr(31, arr)
+  return arr
 }
 kata31()
 
@@ -367,5 +397,6 @@ function kata32() {
     return a.length - b.length
   })
   renderArr(32, arr)
+  return arr
 }
 kata32()
