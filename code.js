@@ -28,7 +28,7 @@ let bestThing =
 // Hint: You could create a function which renders any result to the DOM,
 // then just call this function inside each kata!  That way you only have to write code to render
 // to the DOM once :)
-function renderArr(n, arr){
+function renderArr(n, arr) {
   let result = JSON.stringify(arr)
   let body = document.querySelector("body")
   let h3 = document.createElement("h3")
@@ -38,7 +38,7 @@ function renderArr(n, arr){
   body.append(div)
 }
 
-function renderStr(n, str){
+function renderStr(n, str) {
   let result = str
   let body = document.querySelector("body")
   let h3 = document.createElement("h3")
@@ -52,7 +52,7 @@ function kata1() {
   // Your Code Here
   let arr = gotCitiesCSV.split(",")
   // Render to the DOM.
- renderArr(1, arr)
+  renderArr(1, arr)
   return arr; // Return your result.
 }
 kata1(); // Remember to execute your function!
@@ -61,9 +61,9 @@ kata1(); // Remember to execute your function!
 function kata2() {
   // Your Code Here
   let arr = bestThing.split(" ")
- renderArr(2, arr)
- return arr
-} 
+  renderArr(2, arr)
+  return arr
+}
 kata2()
 
 // Write a function that returns a string separated by semi-colons instead of commas from 'gotCitiesCSV'.
@@ -71,8 +71,8 @@ function kata3() {
   // Your Code Here
   let arr = gotCitiesCSV.split(",")
   let str = arr.join("; ")
- renderStr(3, str)
- return str
+  renderStr(3, str)
+  return str
 }
 kata3()
 
@@ -261,7 +261,7 @@ kata21()
 // Write a function that finds and returns the index of the last word in 'bestThing'.
 function kata22() {
   // Your Code Here
-  let index = bestThing.split(" ").length -1
+  let index = bestThing.split(" ").length - 1
   let str = `The index of the last word in "bestThing" is ${index}`
   renderStr(22, str)
   return str
@@ -273,9 +273,8 @@ function kata23() {
   // Your Code Here
   let gotCitiesCSVArr = gotCitiesCSV.split(",")
   let arr = []
-  for (let i = 0; i < gotCitiesCSVArr.length; i += 1){
-    let currentCity = gotCitiesCSVArr[i]
-    if (/.+a{2}|.+e{2}|.+i{2}|.+o{2}|.+u{2}/.test(currentCity) === true){
+  for (let currentCity of gotCitiesCSVArr) {
+    if (currentCity.includes("aa") || currentCity.includes("ee") || currentCity.includes("ii") || currentCity.includes("oo") || currentCity.includes("uu")) {
       arr.push(currentCity)
     }
   }
@@ -288,9 +287,8 @@ kata23()
 function kata24() {
   // Your Code Here
   let arr = []
-  for (let i = 0; i < lotrCitiesArray.length; i += 1){
-    let currentCity = lotrCitiesArray[i]
-    if (/.+or$/.test(currentCity) === true){
+  for (let currentCity of lotrCitiesArray) {
+    if (currentCity.endsWith("or")) {
       arr.push(currentCity)
     }
   }
@@ -304,13 +302,12 @@ function kata25() {
   // Your Code Here
   let bestThingArr = bestThing.split(" ")
   let arr = []
-  for (let index = 0; index < bestThingArr.length; index += 1){
-    let currentWord = bestThingArr[index]
-    if (/^b/i.test(currentWord) === true){
+  for (let currentWord of bestThingArr) {
+    if (currentWord.startsWith("b")) {
       arr.push(currentWord)
     }
   }
-  renderArr(25, arr)  
+  renderArr(25, arr)
   return arr
 }
 kata25()
@@ -318,8 +315,8 @@ kata25()
 // Write a function that returns 'Yes' or 'No' if 'lotrCitiesArray' includes 'Mirkwood'.
 function kata26() {
   // Your Code Here
-  for (let i = 0; i < lotrCitiesArray.length; i += 1){
-    if (lotrCitiesArray[i].includes("Mirkwood")){
+  for (let currentCity of lotrCitiesArray) {
+    if (currentCity.includes("Mirkwood")) {
       let str = "Yes"
       renderStr(26, str)
       return "Yes"
@@ -334,8 +331,8 @@ kata26()
 // Write a function that returns 'Yes' or 'No' if 'lotrCitiesArray' includes 'Hollywood'.
 function kata27() {
   // Your Code Here
-  for (let i = 0; i < lotrCitiesArray.length; i += 1){
-    if (lotrCitiesArray[i].includes("Hollywood")){
+  for (let i = 0; i < lotrCitiesArray.length; i += 1) {
+    if (lotrCitiesArray[i].includes("Hollywood")) {
       let str = "Yes"
       renderStr(27, str)
       return "Yes"
@@ -360,13 +357,14 @@ kata28()
 // Write a function that finds and returns the first city in 'lotrCitiesArray' that has more than one word.
 function kata29() {
   // Your Code Here
-  let str = ""
-  for (let index = 0; index < lotrCitiesArray.length; index += 1){
-    let currentCity = lotrCitiesArray[index]
-    if (/^.+ .+/.test(currentCity) === true){
-      str = `${currentCity}`
+    for (let currentCity of lotrCitiesArray){
+      if (currentCity.includes(" ")){
+      let str = `${currentCity}`
+      renderStr(29, str)
+      return str
     }
   }
+  let str = `No city with two words are found.`
   renderStr(29, str)
   return str
 }
@@ -393,7 +391,7 @@ kata31()
 // Write a function that sorts 'lotrCitiesArray' by the number of characters in each city (i.e., shortest city names go first) and return the modified array.
 function kata32() {
   // Your Code Here
-  let arr = lotrCitiesArray.sort(function(a, b){
+  let arr = lotrCitiesArray.sort(function (a, b) {
     return a.length - b.length
   })
   renderArr(32, arr)
