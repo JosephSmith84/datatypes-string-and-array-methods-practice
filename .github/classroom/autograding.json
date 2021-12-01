@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Unit Tests - Kata 1",
+      "setup": "",
+      "run": "node",
+      "input": "",
+      "output": "[\"King's Landing\",\"Braavos\",\"Volantis\",\"Old Valyria\",\"Free Cities\",\"Qarth\",\"Meereen\"]",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
