@@ -3,11 +3,11 @@
     {
       "name": "Unit Tests - Kata 1",
       "setup": "",
-      "run": "node",
+      "run": "node tests.js",
       "input": "",
-      "output": "[\"King's Landing\",\"Braavos\",\"Volantis\",\"Old Valyria\",\"Free Cities\",\"Qarth\",\"Meereen\"]",
+      "output": "PASS Test #1 kata1",
       "comparison": "regex",
-      "timeout": 10,
+      "timeout": 1,
       "points": null
     }
   ]
