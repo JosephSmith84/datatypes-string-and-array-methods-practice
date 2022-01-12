@@ -1,13 +1,13 @@
 {
   "tests": [
     {
-      "name": "Unit Tests - Kata 1",
+      "name": "String and Array Methods Activity",
       "setup": "",
       "run": "node tests.js",
       "input": "",
-      "output": "PASS Test #1 kata1",
-      "comparison": "regex",
-      "timeout": 1,
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
       "points": null
     }
   ]
